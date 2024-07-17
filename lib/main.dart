@@ -13,7 +13,7 @@ import 'package:oktoast/oktoast.dart';
 import 'weather/splash/presentation/cubit/splash_cubit.dart';
 
 void main() async {
-  await dotenv.load(fileName: 'assets/.env');
+  await dotenv.load(fileName: 'assets/images/.env');
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
