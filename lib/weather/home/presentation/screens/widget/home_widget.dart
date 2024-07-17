@@ -112,7 +112,7 @@ class HomeWidget extends StatelessWidget {
         controller: _searchText,
         keyboardType: TextInputType.name,
         inputFormatters: [
-          FilteringTextInputFormatter.allow(RegExp("[a-z]")),
+          FilteringTextInputFormatter.allow(RegExp("[a-zA-Z]")),
         ],
         onChanged: (String value) {},
         decoration: InputDecoration(
