@@ -4,13 +4,15 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project used Clean Architecture as Architecture pattern.and i have used Bloc as a state management.
+I have used 3rd Party Api called OpenWeather Api for the Api integration.
+I have write down the unit testing for all the features and used Mockito for mocking the dependencies.
+I have used Dio for Http request and getit for dependency injection.
+for storing Api Keys used flutter_dotenv package and put it in gitignore file.
 
-A few resources to get you started if this is your first Flutter project:
+Thank you.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+

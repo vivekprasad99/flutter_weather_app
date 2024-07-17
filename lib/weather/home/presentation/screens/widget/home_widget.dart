@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_weather_app/core/widget/toast/toast.dart';
@@ -109,6 +110,10 @@ class HomeWidget extends StatelessWidget {
       child: TextFormField(
         textAlign: TextAlign.start,
         controller: _searchText,
+        keyboardType: TextInputType.name,
+        inputFormatters: [
+          FilteringTextInputFormatter.allow(RegExp("[a-z]")),
+        ],
         onChanged: (String value) {},
         decoration: InputDecoration(
           filled: true,
