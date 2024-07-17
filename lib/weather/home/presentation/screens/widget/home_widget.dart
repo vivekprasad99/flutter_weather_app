@@ -71,12 +71,6 @@ class HomeWidget extends StatelessWidget {
   }
 
   Widget searchWidget(BuildContext context) {
-    bool isLoadingg = false;
-    return BlocBuilder<HomeCubit, HomeState>(
-      builder: (context, state) {
-        if (state is LoadingState) {
-          isLoadingg = state.isloading;
-        }
         return Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -85,23 +79,19 @@ class HomeWidget extends StatelessWidget {
               width: 8,
             ),
             InkWell(
-              onTap: isLoadingg
-                  ? null
-                  : () {
+              onTap: () {
                     getWeatherData(context);
                     _searchText.clear();
                     FocusScope.of(context).unfocus();
                     },
-              child: CircleAvatar(
+              child: const CircleAvatar(
                 radius: 26,
-                backgroundColor: isLoadingg ? Colors.grey : Colors.white,
-                child: const Icon(Icons.search),
+                backgroundColor: Colors.white,
+                child: Icon(Icons.search),
               ),
             )
           ],
         );
-      },
-    );
   }
 
   Widget searchBox(BuildContext context) {
