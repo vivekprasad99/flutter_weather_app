@@ -41,7 +41,7 @@ class WeatherWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 buildWeatherText("Weather :- ",
-                    "${weatherModel?.weather?[0]?.main}"),
+                    "${weatherModel?.weather?[0].main}"),
                 buildWeatherText("Humidity :- ",
                     "${weatherModel?.main?.humidity}%"),
                 buildWeatherText("Wind Speed :- ",
@@ -79,6 +79,11 @@ class WeatherWidget extends StatelessWidget {
       case == "Rain":
         return Image.asset(
           'assets/images/2.png',
+          height: 200,
+        );
+      case == "Thunderstorm":
+        return Image.asset(
+          'assets/images/1.png',
           height: 200,
         );
       default:
